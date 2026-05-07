@@ -2,13 +2,13 @@
 
 # Team Members
 
-| Name | Email |
+| Name | Contributions |
 |-----|-----|
-| Joshua Pavon | jjpavon@csu.fullerton.edu |
-| Enter Name | Enter Email |
-| Enter Name | Enter Email |
-| Enter Name | Enter Email |
-| Enter Name | Enter Email |
+| Joshua Pavon | Enter Contributions |
+| Enter Name | Enter Contributions |
+| Enter Name | Enter Contributions |
+| Enter Name | Enter Contributions |
+| Enter Name | Enter Contributions |
 
 ---
 
