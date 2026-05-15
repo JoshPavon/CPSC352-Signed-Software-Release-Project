@@ -5,10 +5,10 @@
 | Name | Contributions |
 |-----|-----|
 | Joshua Pavon | Enter Contributions |
-| Brandon Cheng| Enter Contributions |
-| Enter Name | Enter Contributions |
-| Enter Name | Enter Contributions |
-| Enter Name | Enter Contributions |
+| Brandon Cheng | Enter Contributions |
+| Brian Nguuyen | Enter Contributions |
+| Loi Tran | Enter Contributions |
+| Mike Truong | Enter Contributions |
 
 ---
 
