@@ -5,7 +5,7 @@
 | Name | Contributions |
 |-----|-----|
 | Joshua Pavon | Enter Contributions |
-| Enter Name | Enter Contributions |
+| Brandon Cheng| Enter Contributions |
 | Enter Name | Enter Contributions |
 | Enter Name | Enter Contributions |
 | Enter Name | Enter Contributions |
