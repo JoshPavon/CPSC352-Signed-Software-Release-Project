@@ -1,0 +1,49 @@
+name: Build and Sign Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-sign-release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install build tools
+      run: sudo apt-get update && sudo apt-get install -y g++ gpg
+
+    - name: Build hello.exe from hello.cpp
+      run: g++ hello.cpp -o hello.exe
+
+    - name: Generate SHA256SUMS
+      run: sha256sum hello.exe > SHA256SUMS
+
+    - name: Import GPG private key
+      env:
+        GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      run: |
+        echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+        echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+
+    - name: Sign SHA256SUMS (ASCII-armored detached signature)
+      env:
+        GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      run: |
+        gpg --batch --yes --pinentry-mode loopback \
+            --passphrase "$GPG_PASSPHRASE" \
+            --armor --detach-sign SHA256SUMS
+
+    - name: Create GitHub Release and Upload Assets
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          hello.exe
+          SHA256SUMS
+          SHA256SUMS.asc
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
