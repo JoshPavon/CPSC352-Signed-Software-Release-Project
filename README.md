@@ -4,11 +4,11 @@
 
 | Name | Contributions |
 |-----|-----|
-| Joshua Pavon | Github Repo configuration (hello.cpp, README.md) |
-| Brandon Cheng | Enter Contributions |
-| Brian Nguuyen | Enter Contributions |
-| Loi Tran | Enter Contributions |
-| Mike Truong | Enter Contributions |
+| Joshua Pavon | Github Repo configuration and Documentation|
+| Brandon Cheng | Workflow Testing and Documentation |
+| Brian Nguuyen | Documentation |
+| Loi Tran | Workflow configuration, Testing and Documentation |
+| Mike Truong | Workflow Testing |
 
 ---
 
